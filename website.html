@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FytVerse - Fitness Website</title>
+
+<link rel="stylesheet" href="website.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>FytVerse</h1>
+<p>Your Smart Fitness Companion 🏋️‍♀️</p>
+</header>
+
+<nav>
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('bmi')">BMI</a>
+<a onclick="showPage('tips')">Tips</a>
+<a onclick="showPage('workout')">Workout</a>
+<a onclick="showPage('contact')">Goal</a>
+</nav>
+
+<div id="home" class="container active">
+<div class="card">
+<h2>Welcome</h2>
+<p>Stay fit and healthy with FytVerse.</p>
+<img src="https://static.vecteezy.com/system/resources/previews/047/488/274/non_2x/world-health-day-concept-with-characters-people-are-exercising-yoga-living-healthy-flat-modern-illustration-vector.jpg">
+</div>
+</div>
+
+<div id="bmi" class="container">
+<div class="card">
+<h2>📏 BMI Calculator</h2>
+
+<div class="form-box">
+<input type="number" id="weight" placeholder="Weight (kg)">
+<input type="number" id="feet" placeholder="Height (Feet)">
+<input type="number" id="inch" placeholder="Height (Inch)">
+<button onclick="calculateBMI()">Calculate BMI</button>
+</div>
+
+<p id="bmiResult"></p>
+<div id="bmiTips"></div>
+
+</div>
+</div>
+
+<div id="tips" class="container">
+<div class="card">
+<h2>💡 Professional Fitness Tips</h2>
+<div class="tip-box"><b>Hydration:</b> Drink 2–3 liters of water daily 💧</div>
+<div class="tip-box"><b>Balanced Diet:</b> Protein, carbs, and veggies 🥗</div>
+<div class="tip-box"><b>Consistency:</b> 20–30 min daily workout 🏃</div>
+<div class="tip-box"><b>Sleep:</b> 7–8 hours sleep 😴</div>
+<div class="tip-box"><b>Warm-up & Cool-down:</b> Prevent injury 🧘</div>
+<div class="tip-box"><b>Mental Health:</b> Stress control 🧠</div>
+<img src="https://healthwiseacademy.in/wp-content/uploads/2025/09/best-nutrition-and-diet-management-services.jpg">
+</div>
+</div>
+
+<div id="workout" class="container">
+<div class="card">
+<h2>🏋️‍♀️ Smart Workout Plan</h2>
+<p>Select your level:</p>
+<button onclick="beginnerWorkout()">Beginner</button>
+<button onclick="intermediateWorkout()">Intermediate</button>
+<button onclick="advancedWorkout()">Advanced</button>
+<p id="workoutText" style="margin-top:15px;font-weight:bold;"></p>
+</div>
+</div>
+
+<div id="contact" class="container">
+<div class="card">
+<h2>Your Goal</h2>
+
+<form action="process.php" method="POST" class="form-box">
+<input type="text" name="name" placeholder="Enter Your Name" required>
+<input type="text" name="goal" placeholder="Your Fitness Goal" required>
+<button type="submit">Submit Goal</button>
+</form>
+
+</div>
+</div>
+
+<footer>
+<p>© 2026 FytVerse</p>
+</footer>
+
+<script src="website.js"></script>
+</body>
+</html>
